@@ -5,11 +5,18 @@ package _03_tea_maker;
  */
 
 public class TeaMaker {
-	
-	/* Figure out how to make a cup of tea in this runner class, using the other classes below */
-	TeaBag tbag = new TeaBag("Chamomile");
-
-
+	public static void main(String[] args) {
+		/* Figure out how to make a cup of tea in this runner class, using the other classes below */
+		TeaBag teabag = new TeaBag("Green");
+		Kettle kettle = new Kettle(); 
+		Kettle.Water water = kettle.getWater();
+		kettle.boil(); 
+		
+		Cup cup = new Cup(); 
+		
+		cup.makeTea(teabag, water);
+ 	
+	}
 }
 
 class TeaBag {
